@@ -1,0 +1,169 @@
+@import "~@/assets/global.less";
+header {
+  position: relative;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1350px;
+    .left-layout {
+      .logo {
+        height: 38px;
+        img {
+          height: 100%;
+        }
+      }
+    }
+    .right-layout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .nav-list {
+        display: flex;
+        align-items: center;
+        .nav-item {
+          font-size: 18px;
+          margin: 0 30px;
+          height: 100%;
+          a {
+            display: block;
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 5px;
+              height: 4px;
+              background-color: @orange;
+              border-radius: 4px;
+              bottom: 0;
+              left: calc(50% + 9px);
+              transform: translateX(-50%);
+              display: none;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 16px;
+              height: 4px;
+              background-color: @orange;
+              border-radius: 4px;
+              bottom: 0;
+              left: calc(50% - 4px);
+              transform: translateX(-50%);
+              display: none;
+            }
+            &:hover,
+            &.on {
+              color: @mainColor;
+              &::after,
+              &::before {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .language {
+        position: relative;
+        .language-button {
+          cursor: pointer;
+          margin: 0 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            margin: 0 10px;
+          }
+          .icon {
+            display: flex;
+          }
+          .icon-global {
+            width: 18px;
+            height: 18px;
+          }
+          .arrow-bottom {
+            width: 16px;
+            height: 9px;
+          }
+        }
+        .language-list{
+          display: none;
+          position: absolute;
+          z-index: 9;
+          background-color: #fff;
+          left: 0;
+          top: 33px;
+          width: 100%;
+          text-align: center;
+          .language-item{
+            padding: 10px 0;
+            a{
+              display: block;
+            }
+            &:hover{
+              background-color: @mainColor;
+              a{
+                color:#fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.nav-container {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 60px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: none;
+    .nav-item {
+      margin: 0 33px;
+      padding: 20px 0;
+      a {
+        display: flex;
+        align-items: center;
+        .icon{
+          height: 36px;
+          object-fit:inherit;
+          margin-right: 10px;
+          display: flex;
+          justify-content: center;
+        }
+        span{
+          display: flex;
+          align-items: center;
+        }
+      }
+      &:hover{
+        a{
+          color:@mainColor;
+        }
+      }
+
+    }
+    &.col-2{
+      width: 900px;
+      .nav-item{
+        width: calc(100% / 2 - 66px);
+      }
+    }
+    &.col-3{
+      width: 1100px;
+      .nav-item{
+        width: calc(100% / 3 - 66px);
+      }
+    }
+  }
+}

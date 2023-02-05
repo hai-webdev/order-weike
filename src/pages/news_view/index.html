@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <title>Document</title>
+  </head>
+  <body>
+   <!-- 引入公共页头 -->
+   <%= require("html-loader!../common/header/index.html") %>
+  <section class="banner-container">
+    <img src="/public/images//news/banner.jpg" alt="">
+  </section>
+  <div class="news-container center-layout">
+    <div class="title">
+      微克科技CEO杨远出席成都温江星河WORLD科创城开工奠基仪式，暨战略性 新兴产业企业家成都温江行活动，共谋健康科学发展大计。
+    </div>
+    <img src="/public/images/news/hr.png" alt="" class="hr">
+    <div class="content">
+      <img src="/public/images/news/content.jpg" alt="">
+    </div>
+    <img src="/public/images/news/hr.png" alt="" class="hr">
+  </div>
+   <!-- 引入公共页尾 -->
+   <%= require("html-loader!../common/footer/index.html") %>
+  </body>
+</html>
